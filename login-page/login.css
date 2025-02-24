@@ -1,0 +1,200 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background-color: #f7f7f5;
+}
+
+/* Main container styling */
+main {
+  width: 874px;
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  color: #BBBBBB;
+}
+
+/* Login title styling */
+.login-title h2 {
+  width: fit-content;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 68px;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  background: linear-gradient(
+    90.35deg,
+    #ad7eff 0%,
+    #c29fff 25.72%,
+    #ff9af1 47.25%,
+    #e58ea7 74.18%,
+    #ff5731 100.8%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Login box styling */
+.login-box {
+  display: flex;
+flex-direction: column;
+gap: 35px;
+  background-color: white;
+  border-radius: 20px;
+  width: 874px;
+  height: 700px;
+  padding: 100px 30px;
+  margin: 40px 0;
+  box-shadow: #00000014 1px 1px 50px;
+}
+
+.login-box form, .social-section {
+  width: 650px;
+  display: block;
+  margin: 0 auto; 
+}
+
+.line {
+  border-bottom: solid 1px #bbb;
+}
+
+/* Form label and input styling */
+label {
+  padding: 5px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #060606;
+}
+
+input[type="email"],
+input[type="password"] {
+  background: #efefed;
+  height: 60px;
+  width: 650px;
+  border-radius: 30px;
+  border: none;
+  padding: 0 30px;
+  color: #adadac;
+  margin-bottom: 35px;
+  font-size: 24px;
+}
+
+.login-actions {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Login button styling */
+.login-btn {
+  cursor: pointer;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 7px 20px 7px 7px;
+gap: 20px;
+border: none;
+background: #FF5731;
+color: white;
+border-radius: 35px;
+font-size: 24px;
+}
+
+.login-btn img {
+  width: 45px;
+}
+
+/* Forgot password link */
+.forgot-password {
+font-family: 'Jost';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+color: #000000;
+text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* Или продолжите через: */
+.social-section p {
+font-family: 'Jost';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+color: #000000;
+}
+
+
+
+
+
+/* Social buttons section */
+.social-btn {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 20px;
+}
+
+.social-btn a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.social-btn img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.sign-section h3 {
+font-family: 'Jost';
+font-style: normal;
+font-weight: 500;
+font-size: 38px;
+line-height: 55px;
+display: block;
+align-items: center;
+text-align: center;
+color: #000000;
+}
+
+.sign-section a {
+font-family: 'Jost';
+text-decoration: none;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 35px;
+display: block;
+justify-self: center;
+align-items: center;
+width: fit-content;
+color: #000000;
+}
+
+.sign-section a:hover {
+  text-decoration: underline;
+}
