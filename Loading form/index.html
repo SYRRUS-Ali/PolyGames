@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выгрузка игры</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="poly_games.png" alt="Logo" class="logo">
+                    <img src="mospoly.png" alt="University Logo" class="university-logo">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Поиск...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="theme-switcher">
+                        <button class="btn-theme dark" data-theme="dark">Темная</button>
+                        <button class="btn-theme light" data-theme="light">Светлая</button>
+                    </div>
+                    <button class="btn btn-login">Войти</button>
+                    <button class="btn btn-register">Регистрация</button>
+                    <button class="btn btn-menu" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="main-layout">
+                <aside class="sidebar" id="sidebar">
+                    <ul class="sidebar-list">
+                        <li>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 0V21" stroke="#9960FF" stroke-width="2"/>
+                            <path d="M0 10.5L21 10.5" stroke="#9960FF" stroke-width="2"/>
+                            <path d="M3.07422 3.0752L17.9235 17.9244" stroke="#9960FF" stroke-width="2"/>
+                            <path d="M3.07422 17.9248L17.9235 3.07556" stroke="#9960FF" stroke-width="2"/>
+                            </svg>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link active" data-page="main-info">Основная информация</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" data-page="images-page">Изображения продукта</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Файлы игры</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="content-area" id="main-info">
+                    <h1 class="page-title">Выгрузка игры</h1>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Название игры</h2>
+                        <p class="card-text">Максимальная длина - 46 символов.</p>
+                        <input type="text" class="form-control" maxlength="46">
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Описание игры</h2>
+                        <p class="card-text">Описание особенностей, уникального сюжета и аспектов вашей игры, которое будет отображаться на странице игры. - Максимальная длина текста 1000 символов.</p>
+                        <textarea class="form-control" maxlength="1000"></textarea>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Краткое описание</h2>
+                        <p class="card-text">Краткое описание вашей игры, которое будет отображаться в каталоге игр и превью. Максимальная длина текста - 300 символов.</p>
+                        <textarea class="form-control" maxlength="300"></textarea>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Ключевые слова</h2>
+                        <p class="card-text">Введите подходящие ключевые слова, по которым пользователь сможет найти вашу игру. Разделите слова запятой (прим: зомби, апокалипсис, выживание)</p>
+                        <input type="text" class="form-control">
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Тэги</h2>
+                        <p class="card-text">Введите подходящие тэги, которые будут описывать особенности вашей игры. Используйте подсказки.</p>
+                        <input type="text" class="form-control">
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Поддерживаемые платформы</h2>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Windows
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> macOS
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Linux
+                            </label>
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Минимальные системные требования</h2>
+                        <div class="form-group">
+                            <label for="text">Процессор (CPU)</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Оперативная память (RAM)</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Видеокарта (GPU)</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Свободное место на жестком диске</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Операционная система</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Дополнительные требования*</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <p class="card-text">* Если в списке не указаны прочие необходимые характеристики для вашей игры, укажите их в дополнительных требованиях</p>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Контактная информация</h2>
+                        <p class="card-text">Разработчики ...</p>
+                        <input type="text" class="form-control">
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Жанры</h2>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Шутеры
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Карточные
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Стратегии
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Приключения
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Ролевые
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Пазлы
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Спорт
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input"> Экшены
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Основной жанр</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+<div class="card">
+    <h2 class="card-title">Количество игроков</h2>
+    <div class="radio-group">
+        <label class="radio-label">
+            <input type="radio" name="players" class="radio-input" value="single" checked>
+            <span>Для одного игрока</span>
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="players" class="radio-input" value="multi">
+            <span>Мультиплеер</span>
+        </label>
+    </div>
+    <div class="loading-image"></div>
+</div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Награды игры</h2>
+                        <input type="text" class="form-control">
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <button class="btn btn-continue">Продолжить</button>
+                </section>
+
+                <section class="content-area" id="images-page" style="display: none;">
+                    <h1 class="page-title">Изображения продукта</h1>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Иконка</h2>
+                        <p class="card-text">Иконка вашей игры, которая будет отображаться в каталоге. Размер 512 х 512 пикселей. Формат PNG.</p>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="file-upload-text">Выберите файл или перетащите его сюда</p>
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Обложка</h2>
+                        <p class="card-text">Обложка вашей игры, которая будет отображаться на странице игры. Размер 800 х 470 пикселей. Формат PNG.</p>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="file-upload-text">Выберите файл или перетащите его сюда</p>
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Скриншоты</h2>
+                        <p class="card-text">Скриншоты из вашей игры, которые будут отображаться на странице игры.</p>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="file-upload-text">Выберите файл или перетащите его сюда</p>
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2 class="card-title">Трейлер</h2>
+                        <p class="card-text">Представьте элементы игрового процесса, выделив преимущества и уникальные черты игры. Размещение соответствующих промо-материалов в каталоге направлено на привлечение дополнительного внимания пользователей. Соотношение сторон 16 : 9. Формат MP4.</p>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="file-upload-text">Выберите файл или перетащите его сюда</p>
+                        </div>
+                        <div class="loading-image"></div>
+                    </div>
+                    
+                    <button class="btn btn-continue">Продолжить</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="poly_games.png" alt="Logo" class="footer-logo">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">О нас</a>
+                    <a href="#" class="footer-link">Контакты</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                    <a href="#" class="footer-link">Разработчикам</a>
+                    <a href="#" class="footer-link">Пользовательское соглашение</a>
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

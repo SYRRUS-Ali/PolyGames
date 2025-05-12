@@ -1,0 +1,517 @@
+:root {
+  --primary-color: #9960ff;
+  --secondary-color: #ff5731;
+  --bg-color: #f7f7f5;
+  --card-color: #ffffff;
+  --text-color: #000000;
+  --light-text: #636363;
+  --inactive-text: #626262;
+  --button-bg: #efefed;
+  --button-text: #000000;
+  --checkbox-bg: #e3e3e1;
+  --checkbox-border: #afafaf;
+  --border-radius: 20px;
+  --search-radius: 25px;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --card-color: #2d2d2d;
+  --text-color: #ffffff;
+  --light-text: #a0a0a0;
+  --inactive-text: #8a8a8a;
+  --button-bg: #3d3d3d;
+  --button-text: #ffffff;
+  --checkbox-bg: #3d3d3d;
+  --checkbox-border: #5a5a5a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--bg-color);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.university-logo {
+  height: 40px;
+  display: none;
+}
+
+.search-bar {
+  position: relative;
+  width: 444px;
+  height: 50px;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--search-radius);
+  border: none;
+  background-color: var(--button-bg);
+  padding: 0 20px;
+  font-size: 16px;
+  color: var(--light-text);
+}
+
+.search-bar i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--light-text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-switcher {
+  display: flex;
+  background-color: var(--checkbox-bg);
+  border-radius: var(--search-radius);
+  padding: 1px;
+}
+
+.btn-theme {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: all 0.3s;
+}
+
+.btn-theme.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-register {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-login {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.btn-menu {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 30px 0;
+}
+
+.main-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.sidebar-link {
+  color: var(--inactive-text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.sidebar-link.active {
+  color: var(--text-color);
+}
+
+.content-area {
+  flex: 1;
+  max-width: 740px;
+}
+
+.page-title {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--light-text);
+}
+
+/* Form Elements */
+.form-group {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+    padding: 1rem 0.5rem;
+}
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--button-bg);
+  background-color: var(--button-bg);
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 1px solid var(--checkbox-border);
+  border-radius: 4px;
+  background-color: var(--checkbox-bg);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.checkbox-input:checked {
+  background-color: var(--text-color);
+}
+
+.checkbox-input:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--card-color);
+  font-size: 12px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radio- {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 1px solid var(--checkbox-border);
+  border-radius: 50%;
+  background-color: var(--checkbox-bg);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.radio-input:checked {
+  background-color: var(--text-color);
+}
+
+.radio-input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--card-color);
+  border-radius: 50%;
+}
+
+/* Continue Button */
+.btn-continue {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 7px 10px;
+  font-size: 18px;
+  margin-top: 30px;
+  position: relative;
+  padding-left: 45px;
+}
+
+.btn-continue::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload {
+  border: 2px dashed var(--button-bg);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.file-upload i {
+  font-size: 40px;
+  color: var(--light-text);
+  margin-bottom: 15px;
+}
+
+.file-upload-text {
+  font-size: 16px;
+  color: var(--light-text);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--bg-color);
+  padding: 30px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .btn-menu {
+    display: none;
+  }
+
+  .search-bar,
+  .theme-switcher,
+  .btn-register,
+  .btn-login,
+  .logo-container .logo {
+    display: none;
+  }
+
+  .university-logo {
+    display: block;
+  }
+
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sidebar-item {
+    margin-bottom: 0;
+  }
+
+  .sidebar-item::before {
+    display: none;
+  }
+
+  .content-area {
+    max-width: 100%;
+  }
+
+  .footer-links,
+  .footer-social {
+    display: none;
+  }
+
+  .footer-content {
+    justify-content: center;
+  }
+}
