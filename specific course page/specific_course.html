@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали курса</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logos">
+                <img src="images/poly_games.png" alt="Project Logo" class="project-logo">
+                <img src="images/mospoly.png" alt="Mospoly Logo" class="university-logo">
+            </div>
+            <nav class="desktop-nav">
+                <a href="#">Новости</a>
+                <a href="#">Каталог игр</a>
+                <a href="#">Команды</a>
+                <a href="#">О нас</a>
+                <a href="#">Личный кабинет</a>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="mobile-nav">
+                <a href="#">Новости</a>
+                <a href="#">Каталог игр</a>
+                <a href="#">Команды</a>
+                <a href="#">О нас</a>
+                <a href="#">Личный кабинет</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="course-container">
+        <h1 class="course-title">Разработка компьютерных игр</h1>
+        
+        <div class="course-image">
+            <img src="images/Courses/course-image.png" alt="Разработка компьютерных игр">
+        </div>
+        
+        <h2 class="section-title">Описание</h2>
+        <p class="course-description">
+            В результате изучения программы слушатели приобретут компетенции, необходимые для проектирования, разработки, и поддержки игровых приложений с присвоением квалификации: «Специалист по разработке компьютерных игр».
+        </p>
+        
+        <div class="course-details-grid">
+            <div class="detail-item">
+                <div class="detail-title">Форма обучения</div>
+                <div class="detail-value">Заочная</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-title">Длительность</div>
+                <div class="detail-value">14 месяцев</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-title">Старт</div>
+                <div class="detail-value">1 сентября 2025</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-title">Стоимость</div>
+                <div class="detail-value">Бесплатно</div>
+            </div>
+        </div>
+        
+        <button class="enroll-button">
+            Записаться
+            <div class="icon-circle">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </button>
+        
+        <div class="career-section">
+            <h2 class="section-title">Карьера после прохождения курса</h2>
+            <div class="career-cards">
+                <div class="career-card purple">
+                    <h3 class="career-card-title">Разработчик игр</h3>
+                    <p class="career-card-description">
+                        Специалист, работающий в области создания компьютерных игр. Он создает концепцию и прототип игры, дизайн персонажей и выбирает средства для реализации проекта.
+                    </p>
+                </div>
+                <div class="career-card gray">
+                    <h3 class="career-card-title">Разработчик мобильных приложений</h3>
+                    <p class="career-card-description">
+                        Специалист, разрабатывающий приложения для мобильных устройств. Он работает на нескольких языках программирования.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h2 class="section-title">Частые вопросы о курсе</h2>
+            <ul class="faq-list">
+                <li class="faq-item">Помогаете ли вы с трудоустройством?</li>
+                <li class="faq-item">Если нет навыков программирования, что делать?</li>
+                <li class="faq-item">У меня есть идея-мечта о создании собственной игры, поможет ли мне данный курс?</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <img src="images/poly_games.png" alt="Project Logo">
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
